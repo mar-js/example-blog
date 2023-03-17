@@ -10,7 +10,7 @@ export const Card: React.FC<IPost> = ({
   mainImage: { id, url },
   createdAt
 }) => (
-  <Link className="shadow-xl hover:shadow-2xl rounded" href={ linkPost }>
+  <Link className="shadow-xl hover:shadow-2xl rounded" href={ `posts/${linkPost}` }>
     <article className="w-full h-full">
       <div className="w-full h-[220px] relative">
         <Image
