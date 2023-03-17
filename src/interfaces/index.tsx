@@ -17,15 +17,15 @@ export interface IPostsApi {
 }
 
 export interface IPost {
+  createdAt: Date;
   title: string;
-  linkPost: string;
+  slug: string;
   descriptionTitle: string;
-  description: MDXRemoteSerializeResult;
+  description?: MDXRemoteSerializeResult;
   mainImage: {
     id: string;
     url: string;
   };
-  createdAt: Date;
 }
 
 export interface ILink {
