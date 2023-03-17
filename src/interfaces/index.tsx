@@ -5,21 +5,21 @@ type TLoading = 'loading' | 'ok' | 'fail'
 export interface IPostContextModel {
   loading: TLoading;
   error?: string | unknown;
-  data?: IPost
+  data?: IPost;
 }
 
 export interface IPostsContextModel {
   loading: TLoading;
   error?: string | unknown;
-  data?: IPost[]
+  data?: IPost[];
 }
 
 export interface IPostApi {
-  post: IPost
+  post: IPost;
 }
 
 export interface IPostsApi {
-  posts: IPost[]
+  posts: IPost[];
 }
 
 export interface IPost {
