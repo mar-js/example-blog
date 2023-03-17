@@ -1,3 +1,5 @@
+import { MDXRemoteSerializeResult } from 'next-mdx-remote'
+
 type TLoading = 'loading' | 'ok' | 'fail'
 
 export interface IPostsContextModel {
@@ -6,7 +8,11 @@ export interface IPostsContextModel {
   data?: IPost[]
 }
 
-export interface IPosts {
+export interface IPostApi {
+  post: IPost
+}
+
+export interface IPostsApi {
   posts: IPost[]
 }
 
@@ -14,6 +20,7 @@ export interface IPost {
   title: string;
   linkPost: string;
   descriptionTitle: string;
+  description: MDXRemoteSerializeResult;
   mainImage: {
     id: string;
     url: string;
