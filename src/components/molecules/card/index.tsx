@@ -4,13 +4,13 @@ import Image from 'next/image'
 import { IPost } from 'interfaces'
 
 export const Card: React.FC<IPost> = ({
-  linkPost,
+  slug,
   title,
   descriptionTitle,
   mainImage: { id, url },
   createdAt
 }) => (
-  <Link className="shadow-xl hover:shadow-2xl rounded" href={ `posts/${linkPost}` }>
+  <Link className="shadow-xl hover:shadow-2xl rounded" href={ `posts/${slug}` }>
     <article className="w-full h-full">
       <div className="w-full h-[220px] relative">
         <Image
