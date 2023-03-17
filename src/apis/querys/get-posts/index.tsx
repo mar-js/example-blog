@@ -4,7 +4,7 @@ export const queryGetPosts = gql`
   query Posts {
     posts(orderBy: publishedAt_DESC) {
       title
-      linkPost
+      slug
       descriptionTitle
       mainImage {
         id
