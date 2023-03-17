@@ -2,6 +2,12 @@ import { MDXRemoteSerializeResult } from 'next-mdx-remote'
 
 type TLoading = 'loading' | 'ok' | 'fail'
 
+export interface IPostContextModel {
+  loading: TLoading;
+  error?: string | unknown;
+  data?: IPost
+}
+
 export interface IPostsContextModel {
   loading: TLoading;
   error?: string | unknown;
@@ -21,7 +27,7 @@ export interface IPost {
   title: string;
   slug: string;
   descriptionTitle: string;
-  description?: MDXRemoteSerializeResult;
+  description: MDXRemoteSerializeResult;
   mainImage: {
     id: string;
     url: string;
